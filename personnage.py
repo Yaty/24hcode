@@ -8,6 +8,10 @@ class personnage:
 		self.point.x = x
 		self.point.y = y
 
+	def __str__(self):
+		s="("+str(self.point.x)+","+str(self.point.y)+")\n"
+		return s
+
 	def set_x(self, incr_x):
 		self.point.x += incr_x
 

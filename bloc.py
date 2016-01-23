@@ -1,6 +1,13 @@
 #!/usr/bin/python3.4.3+
 #-*- coding: utf-8 -*-
 
+import pygame
+from pygame.locals import *
+from point import *
+from personnage import *
+from fenetre import *
+from structure import *
+
 class bloc:
 
 	def __init__(self):
@@ -24,5 +31,8 @@ class bloc:
 
 	def get_y(self):
 		return self.point.y
+
+	def afficher(self, game):
+		
 
 	

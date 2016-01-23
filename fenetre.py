@@ -1,5 +1,8 @@
 import pygame
 from pygame.locals import *
+from point import *
+from personnage import *
+from structure import *
 
 class game:
 
@@ -29,11 +32,11 @@ class game:
 	def afficherPattern(self, pattern):
 		pattern.afficher(self)
 
-	def refresh(self, perso):
+	def refresh(self, perso, struct, pattern):
 		afficherFond(self)
-		afficherPerso(self)
-		afficherStruct(self)
-		afficherPattern(self)
+		perso.afficher(perso, self)
+		#afficherStruct(stuct, self)
+		#afficherPattern(pattern, self)
 		pygame.display.flip()
 
 

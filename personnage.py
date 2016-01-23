@@ -1,12 +1,18 @@
 #!/usr/bin/python3.4.3+
 #-*- coding: utf-8 -*-
 
+import pygame
+from pygame.locals import *
+from point import *
+from fenetre import *
+from structure import *
+
 class personnage:
 
-	def __init__(self):
-		self.point = point()
-		self.point.x = x
-		self.point.y = y
+	def __init__(self, x,y):
+		
+		self.point = point(x,y)
+		self.image = pygame.image.load("./images/perso.png")
 
 	def __str__(self):
 		s="("+str(self.point.x)+","+str(self.point.y)+")\n"
@@ -24,9 +30,9 @@ class personnage:
 	def get_y(self):
 		return self.point.y
 
-	def afficher(fenetre):
-		self.fenetre = pygame.image.load("./images/perso.png")
-		self.fenetre
+	def afficher(self, game):
+		game.fenetre.blit(self.image, (self.point.x, self.point.y))
+		pygame.display.flip()
 
 
 	#def tirer(self):

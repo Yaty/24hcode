@@ -24,5 +24,10 @@ class personnage:
 	def get_y(self):
 		return self.point.y
 
+	def afficher(fenetre):
+		self.fenetre = pygame.image.load("./images/perso.png")
+		self.fenetre
+
+
 	#def tirer(self):
 		# On va tirer

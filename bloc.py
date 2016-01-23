@@ -10,11 +10,12 @@ from structure import *
 
 class bloc:
 
-	def __init__(self):
-		self.point.x = x
-		self.point.y = y
+	def __init__(self, x, y, typeBloc):
+		self.point = point(x,y)
 		self.l = 40
 		self.L = 40
+		self.type = typeBloc
+		self.image = pygame.image.load("images/bloc_pattern.png")
 
 	def __str__(self):
 		s="("+str(self.x)+","+str(self.y)+")\n"
@@ -33,6 +34,8 @@ class bloc:
 		return self.point.y
 
 	def afficher(self, game):
-		
+		game.fenetre.blit(self.image, (self.point.x, self.point.y))
+
+
 
 	

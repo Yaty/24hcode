@@ -6,13 +6,14 @@ from fenetre import *
 
 class structure:
 
-	def __init__(self, pattern):
-
+	def __init__(self, typeStruct, taille):
 		self.blocs = []
-		self.taille = 0
-		self.pattern = pattern
+		self.type = typeStruct
+		self.taille = taille
+		
+	def addBloc(self, bloc):
+		self.blocs.append(bloc)
 
-	def afficher(game, self):
-
-		for i in range(taille):
-			self.blocs[i].afficher()
+	def afficher(self, game):
+		for i in range(self.taille):
+			self.blocs[i].afficher(game)

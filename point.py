@@ -1,10 +1,10 @@
 import math	
+<<<<<<< HEAD
 import pygame
 from pygame.locals import *
 from personnage import *
 from fenetre import *
 from structure import *
-
 
 class point:
 	def __init__(self):
@@ -38,12 +38,3 @@ class point:
 	
 		
 	
-"""
-p1 = point(0,0)
-print(p1)
-
-p2=point(2,2)
-print(p2)
-
-print("La distance entre p1 est p2 est : "+str(p1.distance(p2))+"\n")
-"""

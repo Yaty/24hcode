@@ -7,6 +7,7 @@ from point import *
 from fenetre import *
 from structure import *
 
+from time import sleep
 
 class personnage:
 
@@ -34,7 +35,7 @@ class personnage:
 		game.fenetre.blit(self.image, (self.point.x, self.point.y))
 		pygame.display.flip()
 
-	def deplacement(self, event):
+	def actions(self, event, jeu):
 		if event.type == KEYDOWN:
 			if event.key == K_RIGHT: # Déplacement à droite
 				if (self.point.x<=720) and (self.point.y==565 or self.point.y==5):
@@ -57,5 +58,27 @@ class personnage:
 				else:
 					print("Déplacement impossible")
 
-	#def tirer(self):
-		# On va tirer
+			if event.key == K_t: # Si on presse T on va TIREEER
+				self.tirer(1, jeu);
+
+
+
+	def tirer(self, tirer, game):
+		explosion = pygame.image.load("./images/explo.png")
+		game.fenetre.blit(explosion, (self.point.x-8, self.point.y-11))
+
+
+		"""
+		if tirer==1:
+			self.image = pygame.transform.rotate(self.image, 90)
+			self.afficher(game)
+			sleep(0.1)
+			self.image = pygame.transform.rotate(self.image, 90)
+			self.afficher(game)
+			sleep(0.1)
+			self.image = pygame.transform.rotate(self.image, 90)
+			self.afficher(game)
+			sleep(0.1)
+			self.image = pygame.transform.rotate(self.image, 90)
+			self.afficher(game)
+		"""

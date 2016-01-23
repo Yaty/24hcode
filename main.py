@@ -25,4 +25,6 @@ while(boucle):
 	pattern.afficher(jeu)
 	hanSolo.afficher(jeu)
 	for event in pygame.event.get():
-		hanSolo.deplacement(event)
+		jeu.refresh(hanSolo, bloc1, pattern)
+		hanSolo.actions(event, jeu)
+

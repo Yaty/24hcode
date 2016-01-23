@@ -33,10 +33,12 @@ class game:
 		pattern.afficher(self)
 
 	def refresh(self, perso, struct, pattern):
-		afficherFond(self)
-		perso.afficher(perso, self)
+		self.afficherFond()
+		perso.afficher(self)
 		#afficherStruct(stuct, self)
 		#afficherPattern(pattern, self)
 		pygame.display.flip()
+
+
 
 

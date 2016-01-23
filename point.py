@@ -1,5 +1,4 @@
 import math	
-<<<<<<< HEAD
 import pygame
 from pygame.locals import *
 from personnage import *

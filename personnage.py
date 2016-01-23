@@ -34,6 +34,28 @@ class personnage:
 		game.fenetre.blit(self.image, (self.point.x, self.point.y))
 		pygame.display.flip()
 
+	def deplacement(self, event):
+		if event.type == KEYDOWN:
+			if event.key == K_RIGHT: # Déplacement à droite
+				if (self.point.x<=720) and (self.point.y==565 or self.point.y==5):
+					self.point.x+=40
+				else:
+					print("Déplacement impossible")
+			if event.key == K_LEFT: # Déplacement à gauche
+				if (self.point.x>0) and (self.point.y==565 or self.point.y==5):
+					self.point.x-=40
+				else:
+					print("Déplacement impossible")					
+			if event.key == K_UP: # Déplacement haut
+				if (self.point.y>=45) and (self.point.x==0 or self.point.x==760):
+					self.point.y-=40
+				else:
+					print("Déplacement impossible")	
+			if event.key == K_DOWN: # Déplacement bas
+				if (self.point.y<565) and (self.point.x==0 or self.point.x==760):
+					self.point.y+=40
+				else:
+					print("Déplacement impossible")
 
 	#def tirer(self):
 		# On va tirer

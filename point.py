@@ -1,5 +1,5 @@
 import math	
-class Point:
+class point:
 	def __init__(self):
 		self.x=0
 		self.y=0
@@ -25,17 +25,17 @@ class Point:
 	def setAbs(self,abs):
 		self.x=abs
 		
-	def setOrd(self,ord)
+	def setOrd(self,ord):
 		self.y=ord
 		
 	
 		
 	
 
-p1 = Point(0,0)
+p1 = point(0,0)
 print(p1)
 
-p2=Point(2,2)
+p2=point(2,2)
 print(p2)
 
 print("La distance entre p1 est p2 est : "+str(p1.distance(p2))+"\n")

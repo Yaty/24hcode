@@ -1,12 +1,13 @@
 #!/usr/bin/python3.4.3+
 #-*- coding: utf-8 -*-
 
+from point import *
+
 class personnage:
 
 	def __init__(self):
-		self.point = point()
-		self.point.x = x
-		self.point.y = y
+		self.point = point(0,0)
+		
 
 	def __str__(self):
 		s="("+str(self.point.x)+","+str(self.point.y)+")\n"

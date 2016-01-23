@@ -22,7 +22,8 @@ class Point:
 	def getOrd(self):
 		return self.y
 		
-	def
+	def setAbs(self,abs):
+		self.x=abs
 		
 	def setOrd(self,ord)
 		self.y=ord

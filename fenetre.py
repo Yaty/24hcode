@@ -10,4 +10,12 @@ class game:
 		self.fenetre.blit(self.fond, (0,0))
 		pygame.display.flip()
 
+	def afficherFond(self):
+		self.fenetre.blit(self.fond, (0,0))
+
+	def afficherPerso(self, perso):
 		
+
+
+	def refresh(self, perso):
+

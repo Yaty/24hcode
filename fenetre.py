@@ -10,4 +10,5 @@ class game:
 		self.fenetre.blit(self.fond, (0,0))
 		pygame.display.flip()
 
-		
+	def coucou(self):
+		COUCOUC CE EHAJBEFJK

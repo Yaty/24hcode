@@ -15,7 +15,12 @@ class bloc:
 		self.l = 40
 		self.L = 40
 		self.type = typeBloc
-		self.image = pygame.image.load("images/bloc_pattern.png")
+		if self.type == 0:
+			self.image = pygame.image.load("images/bloc_pattern.png")
+		elif self.type == 1:
+			self.image = pygame.image.load("images/bloc_struct.png")
+		else:
+			self.image = pygame.image.load("images/obstacle.png")
 
 	def __str__(self):
 		s="("+str(self.x)+","+str(self.y)+")\n"

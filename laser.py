@@ -15,11 +15,6 @@ class laser:
 		return s
 		
 	
-		
-perso = personnage()
-laz = laser(perso)
-
-print(laz)
 
 
 		
